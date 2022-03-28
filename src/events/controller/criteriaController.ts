@@ -40,7 +40,7 @@ export class CriteriaController {
   @UseInterceptors(ClassSerializerInterceptor)
   @Get()
   async findAll(): Promise<Criteria[]> {
-    return (await this.criteriaService.findAll()).map((criteria) => criteriaGetDto(criteria));
+    return ( await this.criteriaService.findAll()).map((criteria) => criteriaGetDto(criteria));
   }
 
   @UseInterceptors(ClassSerializerInterceptor)
