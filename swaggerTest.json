@@ -249,7 +249,7 @@
       "x-pollin-request-id": "cx",
       "x-pollin-lang": "en",
       "x-pollin-app-version": "1.0.0"
-    }
+    },
     "schemas": {
       "ServiceTypeResponseDto": {
         "type": "object",
