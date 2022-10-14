@@ -4,7 +4,64 @@
     "/clinic-booking/v1/service-type": {
       "get": {
         "operationId": "ServiceTypeController_getServiceTypes",
-        "parameters": [],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Cookie",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-id-token",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-firebase-app-check",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-device-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-source",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-request-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-lang",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-app-version",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": ""
@@ -28,7 +85,64 @@
     "/clinic-booking/v1/appointment": {
       "post": {
         "operationId": "AppointmentController_createAppointment",
-        "parameters": [],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Cookie",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-id-token",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-firebase-app-check",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-device-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-source",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-request-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-lang",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-app-version",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -63,40 +177,58 @@
           },
           {
             "in": "header",
-            "name": "xyz",
+            "name": "Cookie",
             "schema": {
               "type": "string"
-            },
-          },
-          {
-            "$ref": "#/components/schemas/Header1"
-          },
-          {
-            "$ref": "#/components/schemas/Header2"
-          },
-          {
-            "$ref": "#/components/schemas/Header3"
-          },
-          {
-            "$ref": "#/components/schemas/Header4"
-          },
-          {
-            "$ref": "#/components/schemas/Header5"
-          },
-          {
-            "$ref": "#/components/schemas/Header6"
-          },
-          {
-            "$ref": "#/components/schemas/Header7"
-          },
-          {
-            "$ref": "#/components/schemas/Header8"
+            }
           },
           {
             "in": "header",
-            "name": "Headerss",
+            "name": "x-pollin-id-token",
             "schema": {
-              "$ref": "#/components/schemas/Headers"
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-firebase-app-check",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-device-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-source",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-request-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-lang",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-app-version",
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -131,29 +263,61 @@
             }
           },
           {
-            "$ref": "#/components/schemas/Header1"
+            "in": "header",
+            "name": "Cookie",
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/schemas/Header2"
+            "in": "header",
+            "name": "x-pollin-id-token",
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/schemas/Header3"
+            "in": "header",
+            "name": "x-pollin-firebase-app-check",
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/schemas/Header4"
+            "in": "header",
+            "name": "x-pollin-device-id",
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/schemas/Header5"
+            "in": "header",
+            "name": "x-pollin-source",
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/schemas/Header6"
+            "in": "header",
+            "name": "x-pollin-request-id",
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/schemas/Header7"
+            "in": "header",
+            "name": "x-pollin-lang",
+            "schema": {
+              "type": "string"
+            }
           },
           {
-            "$ref": "#/components/schemas/Header8"
-          },
+            "in": "header",
+            "name": "x-pollin-app-version",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "requestBody": {
           "required": true,
@@ -183,6 +347,62 @@
             "name": "appointmentId",
             "required": true,
             "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Cookie",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-id-token",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-firebase-app-check",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-device-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-source",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-request-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-lang",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-app-version",
             "schema": {
               "type": "string"
             }
@@ -216,6 +436,62 @@
             "name": "page",
             "required": true,
             "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Cookie",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-id-token",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-firebase-app-check",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-device-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-source",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-request-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-lang",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-app-version",
             "schema": {
               "type": "string"
             }
@@ -257,6 +533,62 @@
             "name": "date",
             "required": true,
             "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Cookie",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-id-token",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-firebase-app-check",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-device-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-source",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-request-id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-lang",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "x-pollin-app-version",
             "schema": {
               "type": "string"
             }
@@ -585,72 +917,6 @@
         "required": [
           "slots"
         ]
-      },
-      "Headers": {
-        "Cookie": "dd",
-        "x-pollin-id-token": "dsf",
-        "x-pollin-firebase-app-check": "dsfd",
-        "x-pollin-device-id": "sdf",
-        "x-pollin-source": "ios",
-        "x-pollin-request-id": "cx",
-        "x-pollin-lang": "en",
-        "x-pollin-app-version": "1.0.0"
-      },
-      "Header1": {
-        "in": "header",
-        "name": "Cookie",
-        "schema": {
-        "type": "string"
-        },
-      },
-      "Header2": {
-        "in": "header",
-        "name": "x-pollin-id-token",
-        "schema": {
-          "type": "string"
-        },
-      },
-      "Header3": {
-        "in": "header",
-        "name": "x-pollin-firebase-app-check",
-        "schema": {
-          "type": "string"
-        },
-      },
-      "Header4": {
-        "in": "header",
-        "name": "x-pollin-device-id",
-        "schema": {
-          "type": "string"
-        },
-      },
-      "Header5": {
-        "in": "header",
-        "name": "x-pollin-source",
-        "schema": {
-          "type": "string"
-        },
-      },
-      "Header6": {
-        "in": "header",
-        "name": "x-pollin-request-id",
-        "schema": {
-          "type": "string"
-        },
-      },
-      "Header7": {
-        "in": "header",
-        "name": "x-pollin-lang",
-        "schema": {
-          "type": "string"
-        },
-      },
-      "Header8": {
-        "in": "header",
-        "name": "x-pollin-app-version",
-        "schema": {
-          "type": "string"
-        },
       },
       "ExceptionResponses": {
         "type": "object",
