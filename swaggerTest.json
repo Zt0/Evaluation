@@ -62,7 +62,7 @@
             }
           },
           {
-            "in": "headers",
+            "in": "header",
             "name": "x-pollin-app-version",
             "schema": {
             "type": "string"
