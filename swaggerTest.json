@@ -240,6 +240,16 @@
         "type": "http"
       }
     },
+    "headers": {
+      "Cookie": "dd",
+      "x-pollin-id-token": "dsf",
+      "x-pollin-firebase-app-check": "dsfd",
+      "x-pollin-device-id": "sdf",
+      "x-pollin-source": "ios",
+      "x-pollin-request-id": "cx",
+      "x-pollin-lang": "en",
+      "x-pollin-app-version": "1.0.0"
+    }
     "schemas": {
       "ServiceTypeResponseDto": {
         "type": "object",
