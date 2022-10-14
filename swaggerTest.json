@@ -63,9 +63,15 @@
           },
           {
             "in": "header",
-            "name": "x-pollin-app-version",
+            "name": "xyz",
             "schema": {
             "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "Headerss",
+            "schema": {
+              "$ref": "#/components/schemas/Headers"
           }
       }
 ],
@@ -246,16 +252,6 @@
         "bearerFormat": "JWT",
         "type": "http"
     }
-  },
-  "headers": {
-    "Cookie": "dd",
-      "x-pollin-id-token": "dsf",
-      "x-pollin-firebase-app-check": "dsfd",
-      "x-pollin-device-id": "sdf",
-      "x-pollin-source": "ios",
-      "x-pollin-request-id": "cx",
-      "x-pollin-lang": "en",
-      "x-pollin-app-version": "1.0.0"
   },
   "schemas": {
     "ServiceTypeResponseDto": {
@@ -541,6 +537,16 @@
         "slots"
       ]
     },
+  "Headers": {
+    "Cookie": "dd",
+      "x-pollin-id-token": "dsf",
+      "x-pollin-firebase-app-check": "dsfd",
+      "x-pollin-device-id": "sdf",
+      "x-pollin-source": "ios",
+      "x-pollin-request-id": "cx",
+      "x-pollin-lang": "en",
+      "x-pollin-app-version": "1.0.0"
+  },
     "ExceptionResponses": {
       "type": "object",
         "properties": {
