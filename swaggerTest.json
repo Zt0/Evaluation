@@ -54,199 +54,201 @@
         "operationId": "AppointmentController_getAppointmentDetails",
         "parameters": [
           {
+            "name": "appointmentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "in": "headers",
             "name": "x-pollin-app-version",
-            "schema: {
-              "type": "string"
-            }
-            "name": "appointmentId",
-            "required": true,
-            "in": "path", 
             "schema": {
-              "type": "string"
-            }
+            "type": "string"
           }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "default": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAppointmentResponseDTO"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Clinic Booking"
-        ]
-      },
-      "put": {
-        "operationId": "AppointmentController_updateAppointment",
-        "parameters": [
-          {
-            "name": "appointmentId",
-            "required": true,
-            "in": "path",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateAppointmentDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "tags": [
-          "Clinic Booking"
-        ]
       }
-    },
-    "/clinic-booking/v1/appointment/{appointmentId}/cancel": {
-      "post": {
-        "operationId": "AppointmentController_cancelAppointment",
-        "parameters": [
-          {
-            "name": "appointmentId",
-            "required": true,
-            "in": "path",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CancelAppointmentDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "tags": [
-          "Clinic Booking"
-        ]
+],
+"responses": {
+  "200": {
+    "description": ""
+  },
+  "default": {
+    "description": "",
+      "content": {
+      "application/json": {
+        "schema": {
+          "$ref": "#/components/schemas/GetAppointmentResponseDTO"
+        }
       }
-    },
-    "/clinic-booking/v1/provider": {
-      "get": {
-        "operationId": "ProviderController_getServiceProviders",
-        "parameters": [
-          {
-            "name": "page",
-            "required": true,
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "default": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetClinicServiceProviderResponseDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Clinic Booking"
-        ]
+    }
+  }
+},
+"tags": [
+  "Clinic Booking"
+]
+},
+"put": {
+  "operationId": "AppointmentController_updateAppointment",
+    "parameters": [
+    {
+      "name": "appointmentId",
+      "required": true,
+      "in": "path",
+      "schema": {
+        "type": "string"
       }
-    },
-    "/clinic-booking/v1/calendar/slot": {
-      "get": {
-        "operationId": "CalendarController_getServiceProvidersAppointments",
-        "parameters": [
-          {
-            "name": "resourceId",
-            "required": true,
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "date",
-            "required": true,
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          },
-          "default": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetProviderAppointmentResponseDto"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "Clinic Booking"
-        ]
+    }
+  ],
+    "requestBody": {
+    "required": true,
+      "content": {
+      "application/json": {
+        "schema": {
+          "$ref": "#/components/schemas/UpdateAppointmentDTO"
+        }
       }
     }
   },
-  "info": {
-    "title": "Pollin Services",
+  "responses": {
+    "200": {
+      "description": ""
+    }
+  },
+  "tags": [
+    "Clinic Booking"
+  ]
+}
+},
+"/clinic-booking/v1/appointment/{appointmentId}/cancel": {
+  "post": {
+    "operationId": "AppointmentController_cancelAppointment",
+      "parameters": [
+      {
+        "name": "appointmentId",
+        "required": true,
+        "in": "path",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+      "requestBody": {
+      "required": true,
+        "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/CancelAppointmentDTO"
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": ""
+      }
+    },
+    "tags": [
+      "Clinic Booking"
+    ]
+  }
+},
+"/clinic-booking/v1/provider": {
+  "get": {
+    "operationId": "ProviderController_getServiceProviders",
+      "parameters": [
+      {
+        "name": "page",
+        "required": true,
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+      "responses": {
+      "200": {
+        "description": ""
+      },
+      "default": {
+        "description": "",
+          "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/GetClinicServiceProviderResponseDto"
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Clinic Booking"
+    ]
+  }
+},
+"/clinic-booking/v1/calendar/slot": {
+  "get": {
+    "operationId": "CalendarController_getServiceProvidersAppointments",
+      "parameters": [
+      {
+        "name": "resourceId",
+        "required": true,
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      },
+      {
+        "name": "date",
+        "required": true,
+        "in": "query",
+        "schema": {
+          "type": "string"
+        }
+      }
+    ],
+      "responses": {
+      "200": {
+        "description": ""
+      },
+      "default": {
+        "description": "",
+          "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+                "items": {
+                "$ref": "#/components/schemas/GetProviderAppointmentResponseDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tags": [
+      "Clinic Booking"
+    ]
+  }
+}
+},
+"info": {
+  "title": "Pollin Services",
     "description": "",
     "version": "1.0",
     "contact": {}
-  },
-  "tags": [],
+},
+"tags": [],
   "servers": [],
   "components": {
-    "securitySchemes": {
-      "bearer": {
-        "scheme": "bearer",
+  "securitySchemes": {
+    "bearer": {
+      "scheme": "bearer",
         "bearerFormat": "JWT",
         "type": "http"
-      }
-    },
-    "headers": {
-      "Cookie": "dd",
+    }
+  },
+  "headers": {
+    "Cookie": "dd",
       "x-pollin-id-token": "dsf",
       "x-pollin-firebase-app-check": "dsfd",
       "x-pollin-device-id": "sdf",
@@ -254,333 +256,333 @@
       "x-pollin-request-id": "cx",
       "x-pollin-lang": "en",
       "x-pollin-app-version": "1.0.0"
+  },
+  "schemas": {
+    "ServiceTypeResponseDto": {
+      "type": "object",
+        "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "isVirtual": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "isVirtual"
+      ]
     },
-    "schemas": {
-      "ServiceTypeResponseDto": {
-        "type": "object",
+    "GetClinicServiceTypesResponseDto": {
+      "type": "object",
         "properties": {
-          "id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "isVirtual": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "id",
-          "title",
-          "isVirtual"
-        ]
-      },
-      "GetClinicServiceTypesResponseDto": {
-        "type": "object",
-        "properties": {
-          "serviceTypes": {
-            "type": "array",
+        "serviceTypes": {
+          "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ServiceTypeResponseDto"
-            }
+            "$ref": "#/components/schemas/ServiceTypeResponseDto"
           }
-        },
-        "required": [
-          "serviceTypes"
-        ]
+        }
       },
-      "CreateAppointmentDTO": {
-        "type": "object",
+      "required": [
+        "serviceTypes"
+      ]
+    },
+    "CreateAppointmentDTO": {
+      "type": "object",
         "properties": {
-          "serviceTypeId": {
-            "type": "string"
-          },
-          "providerId": {
-            "type": "string"
-          },
-          "patientId": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "date": {
-            "format": "date-time",
-            "type": "string"
-          }
+        "serviceTypeId": {
+          "type": "string"
         },
-        "required": [
-          "serviceTypeId",
-          "providerId",
-          "patientId",
-          "description",
-          "date"
-        ]
+        "providerId": {
+          "type": "string"
+        },
+        "patientId": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "date": {
+          "format": "date-time",
+            "type": "string"
+        }
       },
-      "GetAppointmentDTO": {
-        "type": "object",
+      "required": [
+        "serviceTypeId",
+        "providerId",
+        "patientId",
+        "description",
+        "date"
+      ]
+    },
+    "GetAppointmentDTO": {
+      "type": "object",
         "properties": {
-          "id": {
+        "id": {
+          "type": "string"
+        },
+        "date": {
+          "format": "date-time",
             "type": "string"
-          },
-          "date": {
-            "format": "date-time",
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
+        },
+        "status": {
+          "type": "string",
             "enum": [
-              "Booked",
-              "Arrived",
-              "Fulfilled",
-              "Cancelled",
-              "NoShow",
-              "CheckedIn"
-            ]
-          },
-          "description": {
-            "type": "string"
-          },
-          "cancellationReason": {
-            "type": "string"
-          }
+            "Booked",
+            "Arrived",
+            "Fulfilled",
+            "Cancelled",
+            "NoShow",
+            "CheckedIn"
+          ]
         },
-        "required": [
-          "id",
-          "date",
-          "status",
-          "description",
-          "cancellationReason"
-        ]
-      },
-      "PatientDTO": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          }
+        "description": {
+          "type": "string"
         },
-        "required": [
-          "id",
-          "name"
-        ]
+        "cancellationReason": {
+          "type": "string"
+        }
       },
-      "ServiceTypeDTO": {
-        "type": "object",
+      "required": [
+        "id",
+        "date",
+        "status",
+        "description",
+        "cancellationReason"
+      ]
+    },
+    "PatientDTO": {
+      "type": "object",
         "properties": {
-          "id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "isVirtual": {
-            "type": "boolean"
-          }
+        "id": {
+          "type": "string"
         },
-        "required": [
-          "id",
-          "title",
-          "isVirtual"
-        ]
+        "name": {
+          "type": "string"
+        }
       },
-      "GetAppointmentResponseDTO": {
-        "type": "object",
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "ServiceTypeDTO": {
+      "type": "object",
         "properties": {
-          "appointment": {
-            "$ref": "#/components/schemas/GetAppointmentDTO"
-          },
-          "patient": {
-            "$ref": "#/components/schemas/PatientDTO"
-          },
-          "serviceType": {
-            "$ref": "#/components/schemas/ServiceTypeDTO"
-          }
+        "id": {
+          "type": "string"
         },
-        "required": [
-          "appointment",
-          "patient",
-          "serviceType"
-        ]
-      },
-      "AppointmentDTO": {
-        "type": "object",
-        "properties": {
-          "status": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "date": {
-            "format": "date-time",
-            "type": "string"
-          }
+        "title": {
+          "type": "string"
         },
-        "required": [
-          "status",
-          "description",
-          "date"
-        ]
+        "isVirtual": {
+          "type": "boolean"
+        }
       },
-      "UpdateAppointmentDTO": {
-        "type": "object",
+      "required": [
+        "id",
+        "title",
+        "isVirtual"
+      ]
+    },
+    "GetAppointmentResponseDTO": {
+      "type": "object",
         "properties": {
-          "appointment": {
-            "$ref": "#/components/schemas/AppointmentDTO"
-          },
-          "serviceTypeId": {
-            "type": "string"
-          }
+        "appointment": {
+          "$ref": "#/components/schemas/GetAppointmentDTO"
         },
-        "required": [
-          "appointment",
-          "serviceTypeId"
-        ]
-      },
-      "CancelDTO": {
-        "type": "object",
-        "properties": {
-          "cancellationReason": {
-            "type": "string"
-          }
+        "patient": {
+          "$ref": "#/components/schemas/PatientDTO"
         },
-        "required": [
-          "cancellationReason"
-        ]
+        "serviceType": {
+          "$ref": "#/components/schemas/ServiceTypeDTO"
+        }
       },
-      "CancelAppointmentDTO": {
-        "type": "object",
+      "required": [
+        "appointment",
+        "patient",
+        "serviceType"
+      ]
+    },
+    "AppointmentDTO": {
+      "type": "object",
         "properties": {
-          "appointment": {
-            "$ref": "#/components/schemas/CancelDTO"
-          }
+        "status": {
+          "type": "string"
         },
-        "required": [
-          "appointment"
-        ]
-      },
-      "ServiceProviderDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          }
+        "description": {
+          "type": "string"
         },
-        "required": [
-          "id",
-          "title"
-        ]
+        "date": {
+          "format": "date-time",
+            "type": "string"
+        }
       },
-      "GetClinicServiceProviderResponseDto": {
-        "type": "object",
+      "required": [
+        "status",
+        "description",
+        "date"
+      ]
+    },
+    "UpdateAppointmentDTO": {
+      "type": "object",
         "properties": {
-          "providers": {
-            "type": "array",
+        "appointment": {
+          "$ref": "#/components/schemas/AppointmentDTO"
+        },
+        "serviceTypeId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "appointment",
+        "serviceTypeId"
+      ]
+    },
+    "CancelDTO": {
+      "type": "object",
+        "properties": {
+        "cancellationReason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "cancellationReason"
+      ]
+    },
+    "CancelAppointmentDTO": {
+      "type": "object",
+        "properties": {
+        "appointment": {
+          "$ref": "#/components/schemas/CancelDTO"
+        }
+      },
+      "required": [
+        "appointment"
+      ]
+    },
+    "ServiceProviderDto": {
+      "type": "object",
+        "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title"
+      ]
+    },
+    "GetClinicServiceProviderResponseDto": {
+      "type": "object",
+        "properties": {
+        "providers": {
+          "type": "array",
             "items": {
-              "$ref": "#/components/schemas/ServiceProviderDto"
-            }
+            "$ref": "#/components/schemas/ServiceProviderDto"
           }
-        },
-        "required": [
-          "providers"
-        ]
+        }
       },
-      "Slot": {
-        "type": "object",
+      "required": [
+        "providers"
+      ]
+    },
+    "Slot": {
+      "type": "object",
         "properties": {
-          "id": {
-            "type": "string"
-          },
-          "type": {
-            "type": "object"
-          },
-          "startTime": {
-            "type": "object"
-          },
-          "timeUnits": {
-            "type": "number"
-          },
-          "title": {
-            "type": "string"
-          },
-          "color": {
-            "type": "string"
-          },
-          "isEditable": {
-            "type": "boolean"
-          }
+        "id": {
+          "type": "string"
         },
-        "required": [
-          "type",
-          "startTime",
-          "timeUnits",
-          "title",
-          "isEditable"
-        ]
+        "type": {
+          "type": "object"
+        },
+        "startTime": {
+          "type": "object"
+        },
+        "timeUnits": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        },
+        "isEditable": {
+          "type": "boolean"
+        }
       },
-      "GetProviderAppointmentResponseDto": {
-        "type": "object",
+      "required": [
+        "type",
+        "startTime",
+        "timeUnits",
+        "title",
+        "isEditable"
+      ]
+    },
+    "GetProviderAppointmentResponseDto": {
+      "type": "object",
         "properties": {
-          "slots": {
-            "type": "array",
+        "slots": {
+          "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Slot"
-            }
+            "$ref": "#/components/schemas/Slot"
           }
-        },
-        "required": [
-          "slots"
-        ]
+        }
       },
-      "ExceptionResponses": {
-        "type": "object",
+      "required": [
+        "slots"
+      ]
+    },
+    "ExceptionResponses": {
+      "type": "object",
         "properties": {
-          "data": {
-            "type": "string",
+        "data": {
+          "type": "string",
             "description": "exception data",
             "example": null
-          },
-          "status": {
-            "properties": {
-              "code": {
-                "type": "string",
+        },
+        "status": {
+          "properties": {
+            "code": {
+              "type": "string",
                 "description": "exception code",
                 "enum": [
-                  "succeed",
-                  "failed",
-                  "invalid",
-                  "bad_request",
-                  "validation_error",
-                  "internal_server_error",
-                  "payment_intent_create_failed",
-                  "setup_intent_usage_failed",
-                  "invalid_cart",
-                  "empty_cart",
-                  "unauthorized",
-                  "access_denied",
-                  "not_found",
-                  "unknown_error",
-                  "conflict",
-                  "processing",
-                  "gateway_timeout",
-                  "gone",
-                  "unprocessable_entity",
-                  "forbidden",
-                  "mfa_required",
-                  "timeslot_not_available"
-                ]
-              }
+                "succeed",
+                "failed",
+                "invalid",
+                "bad_request",
+                "validation_error",
+                "internal_server_error",
+                "payment_intent_create_failed",
+                "setup_intent_usage_failed",
+                "invalid_cart",
+                "empty_cart",
+                "unauthorized",
+                "access_denied",
+                "not_found",
+                "unknown_error",
+                "conflict",
+                "processing",
+                "gateway_timeout",
+                "gone",
+                "unprocessable_entity",
+                "forbidden",
+                "mfa_required",
+                "timeslot_not_available"
+              ]
             }
           }
         }
       }
     }
   }
+}
 }
