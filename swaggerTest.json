@@ -54,9 +54,14 @@
         "operationId": "AppointmentController_getAppointmentDetails",
         "parameters": [
           {
+            "in": "headers",
+            "name": "x-pollin-app-version",
+            "schema: {
+              "type": "string"
+            }
             "name": "appointmentId",
             "required": true,
-            "in": "path",
+            "in": "path", 
             "schema": {
               "type": "string"
             }
