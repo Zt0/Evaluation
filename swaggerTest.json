@@ -72,6 +72,27 @@
             "$ref": "#/components/schemas/Header1"
           },
           {
+            "$ref": "#/components/schemas/Header2"
+          },
+          {
+            "$ref": "#/components/schemas/Header3"
+          },
+          {
+            "$ref": "#/components/schemas/Header4"
+          },
+          {
+            "$ref": "#/components/schemas/Header5"
+          },
+          {
+            "$ref": "#/components/schemas/Header6"
+          },
+          {
+            "$ref": "#/components/schemas/Header7"
+          },
+          {
+            "$ref": "#/components/schemas/Header8"
+          },
+          {
             "in": "header",
             "name": "Headerss",
             "schema": {
@@ -108,7 +129,31 @@
             "schema": {
               "type": "string"
             }
-          }
+          },
+          {
+            "$ref": "#/components/schemas/Header1"
+          },
+          {
+            "$ref": "#/components/schemas/Header2"
+          },
+          {
+            "$ref": "#/components/schemas/Header3"
+          },
+          {
+            "$ref": "#/components/schemas/Header4"
+          },
+          {
+            "$ref": "#/components/schemas/Header5"
+          },
+          {
+            "$ref": "#/components/schemas/Header6"
+          },
+          {
+            "$ref": "#/components/schemas/Header7"
+          },
+          {
+            "$ref": "#/components/schemas/Header8"
+          },
         ],
         "requestBody": {
           "required": true,
@@ -553,9 +598,58 @@
       },
       "Header1": {
         "in": "header",
-        "name": "sadfsdaf",
+        "name": "Cookie",
         "schema": {
         "type": "string"
+        },
+      },
+      "Header2": {
+        "in": "header",
+        "name": "x-pollin-id-token",
+        "schema": {
+          "type": "string"
+        },
+      },
+      "Header3": {
+        "in": "header",
+        "name": "x-pollin-firebase-app-check",
+        "schema": {
+          "type": "string"
+        },
+      },
+      "Header4": {
+        "in": "header",
+        "name": "x-pollin-device-id",
+        "schema": {
+          "type": "string"
+        },
+      },
+      "Header5": {
+        "in": "header",
+        "name": "x-pollin-source",
+        "schema": {
+          "type": "string"
+        },
+      },
+      "Header6": {
+        "in": "header",
+        "name": "x-pollin-request-id",
+        "schema": {
+          "type": "string"
+        },
+      },
+      "Header7": {
+        "in": "header",
+        "name": "x-pollin-lang",
+        "schema": {
+          "type": "string"
+        },
+      },
+      "Header8": {
+        "in": "header",
+        "name": "x-pollin-app-version",
+        "schema": {
+          "type": "string"
         },
       },
       "ExceptionResponses": {
