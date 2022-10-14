@@ -69,6 +69,9 @@
             },
           },
           {
+            "$ref": "#/components/schemas/Header1"
+          },
+          {
             "in": "header",
             "name": "Headerss",
             "schema": {
@@ -547,6 +550,13 @@
         "x-pollin-request-id": "cx",
         "x-pollin-lang": "en",
         "x-pollin-app-version": "1.0.0"
+      },
+      "Header1": {
+        "in": "header",
+        "name": "sadfsdaf",
+        "schema": {
+        "type": "string"
+        },
       },
       "ExceptionResponses": {
         "type": "object",
